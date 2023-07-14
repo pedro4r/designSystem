@@ -6,7 +6,7 @@
             "dom",
             "ES2015"
         ],
-        "module": "EXNext",
+        "module": "ESNext",
         "target": "es6"
     }
 }

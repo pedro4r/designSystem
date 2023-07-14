@@ -1,9 +1,26 @@
 var __create = Object.create;
 var __defProp = Object.defineProperty;
+var __defProps = Object.defineProperties;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
+var __getOwnPropDescs = Object.getOwnPropertyDescriptors;
 var __getOwnPropNames = Object.getOwnPropertyNames;
+var __getOwnPropSymbols = Object.getOwnPropertySymbols;
 var __getProtoOf = Object.getPrototypeOf;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __propIsEnum = Object.prototype.propertyIsEnumerable;
+var __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
+var __spreadValues = (a, b) => {
+  for (var prop in b || (b = {}))
+    if (__hasOwnProp.call(b, prop))
+      __defNormalProp(a, prop, b[prop]);
+  if (__getOwnPropSymbols)
+    for (var prop of __getOwnPropSymbols(b)) {
+      if (__propIsEnum.call(b, prop))
+        __defNormalProp(a, prop, b[prop]);
+    }
+  return a;
+};
+var __spreadProps = (a, b) => __defProps(a, __getOwnPropDescs(b));
 var __commonJS = (cb, mod) => function __require() {
   return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
 };
@@ -33,14 +50,17 @@ var require_dist = __commonJS({
     var __getOwnPropNames2 = Object.getOwnPropertyNames;
     var __hasOwnProp2 = Object.prototype.hasOwnProperty;
     var __export = (target, all) => {
-      for (var name in all)
+      for (const name in all)
         __defProp2(target, name, { get: all[name], enumerable: true });
     };
     var __copyProps2 = (to, from, except, desc) => {
       if (from && typeof from === "object" || typeof from === "function") {
-        for (let key of __getOwnPropNames2(from))
+        for (const key of __getOwnPropNames2(from))
           if (!__hasOwnProp2.call(to, key) && key !== except)
-            __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+            __defProp2(to, key, {
+              get: () => from[key],
+              enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable
+            });
       }
       return to;
     };
@@ -48,12 +68,12 @@ var require_dist = __commonJS({
     var src_exports = {};
     __export(src_exports, {
       colors: () => colors2,
-      fontSizes: () => fontSizes,
-      fontWeights: () => fontWeights,
-      fonts: () => fonts,
-      lineHeights: () => lineHeights,
-      radii: () => radii,
-      space: () => space
+      fontSizes: () => fontSizes2,
+      fontWeights: () => fontWeights2,
+      fonts: () => fonts2,
+      lineHeights: () => lineHeights2,
+      radii: () => radii2,
+      space: () => space2
     });
     module.exports = __toCommonJS(src_exports);
     var colors2 = {
@@ -72,7 +92,7 @@ var require_dist = __commonJS({
       ignite700: "#015F43",
       ignite900: "#00291D"
     };
-    var space = {
+    var space2 = {
       1: "0.25rem",
       2: "0.5rem",
       3: "0.75rem",
@@ -89,7 +109,7 @@ var require_dist = __commonJS({
       64: "16rem",
       80: "20rem"
     };
-    var radii = {
+    var radii2 = {
       px: "1px",
       xs: "4px",
       sm: "6px",
@@ -97,11 +117,11 @@ var require_dist = __commonJS({
       lg: "16px",
       full: "99999px"
     };
-    var fonts = {
+    var fonts2 = {
       default: "Roboto, sans-serif",
       code: "monospace"
     };
-    var fontSizes = {
+    var fontSizes2 = {
       xxs: "0.625rem",
       xs: "0.75rem",
       sm: "0.875rem",
@@ -116,12 +136,12 @@ var require_dist = __commonJS({
       "8xl": "4.5rem",
       "9xl": "6rem"
     };
-    var fontWeights = {
+    var fontWeights2 = {
       regular: "400",
       medium: "500",
       bold: "700"
     };
-    var lineHeights = {
+    var lineHeights2 = {
       shorter: "125%",
       short: "140%",
       base: "160%",
@@ -130,6 +150,42 @@ var require_dist = __commonJS({
   }
 });
 
-// src/index.ts
+// src/styles/index.ts
 var import_tokens = __toESM(require_dist());
-console.log(import_tokens.colors);
+import { createStitches, defaultThemeMap } from "@stitches/react";
+var {
+  styled,
+  css,
+  globalCss,
+  keyframes,
+  getCssText,
+  theme,
+  createTheme,
+  config
+} = createStitches({
+  themeMap: __spreadProps(__spreadValues({}, defaultThemeMap), {
+    height: "space",
+    with: "space"
+  }),
+  theme: {
+    colors: import_tokens.colors,
+    fontSizes: import_tokens.fontSizes,
+    fontWeights: import_tokens.fontWeights,
+    fonts: import_tokens.fonts,
+    lineHeights: import_tokens.lineHeights,
+    radii: import_tokens.radii,
+    space: import_tokens.space
+  }
+});
+
+// src/index.tsx
+var Button = styled("button", {
+  fontFamily: "$default",
+  backgroundColor: "$ignite300",
+  borderRadius: "$md",
+  padding: "$4",
+  border: 0
+});
+export {
+  Button
+};
