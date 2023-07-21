@@ -56,17 +56,14 @@ var require_dist = __commonJS({
     var __getOwnPropNames2 = Object.getOwnPropertyNames;
     var __hasOwnProp2 = Object.prototype.hasOwnProperty;
     var __export2 = (target, all) => {
-      for (const name in all)
+      for (var name in all)
         __defProp2(target, name, { get: all[name], enumerable: true });
     };
     var __copyProps2 = (to, from, except, desc) => {
       if (from && typeof from === "object" || typeof from === "function") {
-        for (const key of __getOwnPropNames2(from))
+        for (let key of __getOwnPropNames2(from))
           if (!__hasOwnProp2.call(to, key) && key !== except)
-            __defProp2(to, key, {
-              get: () => from[key],
-              enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable
-            });
+            __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
       }
       return to;
     };
@@ -195,9 +192,25 @@ var {
 var Button = styled("button", {
   fontFamily: "$default",
   backgroundColor: "$ignite300",
-  borderRadius: "$md",
-  padding: "$4",
-  border: 0
+  borderRadius: "$sm",
+  border: 0,
+  fontWeight: "bold",
+  color: "$white",
+  variants: {
+    size: {
+      small: {
+        fontSize: 14,
+        padding: "$2 $4"
+      },
+      big: {
+        fontSize: 16,
+        padding: "$3 $6"
+      }
+    }
+  },
+  defaultVariants: {
+    size: "small"
+  }
 });
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
