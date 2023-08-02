@@ -178,6 +178,7 @@ var Box = styled("div", {
   backgroundColor: "$gray800",
   border: "1px solid $grau600"
 });
+Box.displayName = "Box";
 
 // src/components/Text.tsx
 var Text = styled("p", {
@@ -193,7 +194,7 @@ var Text = styled("p", {
       md: { fontSize: "$md" },
       lg: { fontSize: "$lg" },
       xl: { fontSize: "$xl" },
-      "2xl": { fontSize: "$2x" },
+      "2xl": { fontSize: "$2xl" },
       "4xl": { fontSize: "$4xl" },
       "5xl": { fontSize: "$5xl" },
       "6xl": { fontSize: "$6xl" },
@@ -206,6 +207,7 @@ var Text = styled("p", {
     size: "md"
   }
 });
+Text.displayName = "Text";
 
 // src/components/Heading.tsx
 var Heading = styled("h2", {
@@ -215,20 +217,21 @@ var Heading = styled("h2", {
   color: "$gray100",
   variants: {
     size: {
-      sm: { fontSize: "#xl" },
-      md: { fontSize: "#2xl" },
-      lg: { fontSize: "#4xl" },
-      "2xl": { fontSize: "#5xl" },
-      "3xl": { fontSize: "#6xl" },
-      "4xl": { fontSize: "#7xl" },
-      "5xl": { fontSize: "#8xl" },
-      "6xl": { fontSize: "#9xl" }
+      sm: { fontSize: "$xl" },
+      md: { fontSize: "$2xl" },
+      lg: { fontSize: "$4xl" },
+      "2xl": { fontSize: "$5xl" },
+      "3xl": { fontSize: "$6xl" },
+      "4xl": { fontSize: "$7xl" },
+      "5xl": { fontSize: "$8xl" },
+      "6xl": { fontSize: "$9xl" }
     }
   },
   fefaultVariants: {
     size: "md"
   }
 });
+Heading.displayName = "Heading";
 
 // src/components/Avatar/index.tsx
 var import_phosphor_react = require("phosphor-react");
@@ -340,6 +343,7 @@ var Button = styled("button", {
     size: "md"
   }
 });
+Button.displayName = "Button";
 
 // src/components/TextInput/styles.ts
 var TextInputContainer = styled("div", {
@@ -392,6 +396,7 @@ function TextInput(_a) {
     /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Input, __spreadValues({}, props))
   ] });
 }
+TextInput.displayName = "TextInput";
 
 // src/components/TextArea.tsx
 var TextArea = styled("textarea", {
@@ -418,6 +423,7 @@ var TextArea = styled("textarea", {
     color: "$gray400"
   }
 });
+TextArea.displayName = "TextArea";
 
 // src/components/Checkbox/index.tsx
 var import_phosphor_react2 = require("phosphor-react");
@@ -478,6 +484,7 @@ var import_jsx_runtime3 = require("react/jsx-runtime");
 function Checkbox2(props) {
   return /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(CheckboxContainer, __spreadProps(__spreadValues({}, props), { children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(CheckboxIndicator, { asChild: true, children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(import_phosphor_react2.Check, { weight: "bold" }) }) }));
 }
+Checkbox2.displayName = "Checkbox";
 
 // src/components/MultiStep/styles.ts
 var MultiStepContainer = styled("div", {});
@@ -521,6 +528,7 @@ function MultiStep({ size, currentStep = 1 }) {
     }) })
   ] });
 }
+MultiStep.displayName = "MultiStep";
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   Avatar,
