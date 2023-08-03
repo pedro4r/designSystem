@@ -1,4 +1,4 @@
-# @jupiter-ui/tokens
+# @jupiter-ui/ts-config
 
 ## 2.1.0
 
@@ -11,9 +11,3 @@
 ### Major Changes
 
 - Change package.json
-
-## 1.1.0
-
-### Minor Changes
-
-- Add new test color

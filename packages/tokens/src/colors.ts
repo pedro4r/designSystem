@@ -16,5 +16,5 @@ export const colors = {
   jupiter700: '#015F43',
   jupiter900: '#00291D',
 
-  test: '#FFF',
+  test1: '#000',
 }
