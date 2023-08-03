@@ -83,10 +83,10 @@ var colors = {
   gray700: "#29292E",
   gray800: "#202024",
   gray900: "#121214",
-  ignite300: "#00B37E",
-  ignite500: "#00875F",
-  ignite700: "#015F43",
-  ignite900: "#00291D"
+  jupiter300: "#00B37E",
+  jupiter500: "#00875F",
+  jupiter700: "#015F43",
+  jupiter900: "#00291D"
 };
 var space = {
   1: "0.25rem",
@@ -299,19 +299,19 @@ var Button = styled("button", {
     variant: {
       primary: {
         color: "$white",
-        background: "$ignite500",
+        background: "$jupiter500",
         "&:not(:disabled):hover": {
-          background: "$ignite300"
+          background: "$jupiter300"
         },
         "&:disabled": {
           backgroundColor: "$gray200"
         }
       },
       secondary: {
-        color: "$ignite300",
-        border: "2px solid $ignite500",
+        color: "$jupiter300",
+        border: "2px solid $jupiter500",
         "&:not(disabled):hover": {
-          background: "$ignite500",
+          background: "$jupiter500",
           color: "$white"
         },
         "&:disabled": {
@@ -355,7 +355,7 @@ var TextInputContainer = styled("div", {
   display: "flex",
   alignItems: "baseline",
   "&:has(input:focus)": {
-    borderColor: "$ignite300"
+    borderColor: "$jupiter300"
   },
   "&:has(input:disabled)": {
     opacity: 0.5,
@@ -413,7 +413,7 @@ var TextArea = styled("textarea", {
   minHeight: 80,
   "&:focus": {
     outline: 0,
-    borderColor: "$ignite300"
+    borderColor: "$jupiter300"
   },
   "&:disabled": {
     opacity: 0.5,
@@ -445,10 +445,10 @@ var CheckboxContainer = styled(Checkbox.Root, {
   alignItems: "center",
   border: "2px solid $gray900",
   '&[data-state="checked"]': {
-    backgroundColor: "$ignite300"
+    backgroundColor: "$jupiter300"
   },
   "&:focus": {
-    border: "2px solid $ignite300"
+    border: "2px solid $jupiter300"
   }
 });
 var slideIn = keyframes({

@@ -18,10 +18,10 @@ declare const Box: _stitches_react_types_styled_component.StyledComponent<"div",
         gray700: string;
         gray800: string;
         gray900: string;
-        ignite300: string;
-        ignite500: string;
-        ignite700: string;
-        ignite900: string;
+        jupiter300: string;
+        jupiter500: string;
+        jupiter700: string;
+        jupiter900: string;
     };
     fontSizes: {
         xxs: string;
@@ -226,10 +226,10 @@ declare const Text: _stitches_react_types_styled_component.StyledComponent<"p", 
         gray700: string;
         gray800: string;
         gray900: string;
-        ignite300: string;
-        ignite500: string;
-        ignite700: string;
-        ignite900: string;
+        jupiter300: string;
+        jupiter500: string;
+        jupiter700: string;
+        jupiter900: string;
     };
     fontSizes: {
         xxs: string;
@@ -434,10 +434,10 @@ declare const Heading: _stitches_react_types_styled_component.StyledComponent<"h
         gray700: string;
         gray800: string;
         gray900: string;
-        ignite300: string;
-        ignite500: string;
-        ignite700: string;
-        ignite900: string;
+        jupiter300: string;
+        jupiter500: string;
+        jupiter700: string;
+        jupiter900: string;
     };
     fontSizes: {
         xxs: string;
@@ -640,10 +640,10 @@ declare const AvatarImage: _stitches_react_types_styled_component.StyledComponen
         gray700: string;
         gray800: string;
         gray900: string;
-        ignite300: string;
-        ignite500: string;
-        ignite700: string;
-        ignite900: string;
+        jupiter300: string;
+        jupiter500: string;
+        jupiter700: string;
+        jupiter900: string;
     };
     fontSizes: {
         xxs: string;
@@ -852,10 +852,10 @@ declare const Button: _stitches_react_types_styled_component.StyledComponent<"bu
         gray700: string;
         gray800: string;
         gray900: string;
-        ignite300: string;
-        ignite500: string;
-        ignite700: string;
-        ignite900: string;
+        jupiter300: string;
+        jupiter500: string;
+        jupiter700: string;
+        jupiter900: string;
     };
     fontSizes: {
         xxs: string;
@@ -1058,10 +1058,10 @@ declare const Input: _stitches_react_types_styled_component.StyledComponent<"inp
         gray700: string;
         gray800: string;
         gray900: string;
-        ignite300: string;
-        ignite500: string;
-        ignite700: string;
-        ignite900: string;
+        jupiter300: string;
+        jupiter500: string;
+        jupiter700: string;
+        jupiter900: string;
     };
     fontSizes: {
         xxs: string;
@@ -1269,10 +1269,10 @@ declare const TextArea: _stitches_react_types_styled_component.StyledComponent<"
         gray700: string;
         gray800: string;
         gray900: string;
-        ignite300: string;
-        ignite500: string;
-        ignite700: string;
-        ignite900: string;
+        jupiter300: string;
+        jupiter500: string;
+        jupiter700: string;
+        jupiter900: string;
     };
     fontSizes: {
         xxs: string;
@@ -1473,10 +1473,10 @@ declare const CheckboxContainer: _stitches_react_types_styled_component.StyledCo
         gray700: string;
         gray800: string;
         gray900: string;
-        ignite300: string;
-        ignite500: string;
-        ignite700: string;
-        ignite900: string;
+        jupiter300: string;
+        jupiter500: string;
+        jupiter700: string;
+        jupiter900: string;
     };
     fontSizes: {
         xxs: string;

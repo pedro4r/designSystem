@@ -10,10 +10,10 @@ var colors = {
   gray700: "#29292E",
   gray800: "#202024",
   gray900: "#121214",
-  ignite300: "#00B37E",
-  ignite500: "#00875F",
-  ignite700: "#015F43",
-  ignite900: "#00291D"
+  jupiter300: "#00B37E",
+  jupiter500: "#00875F",
+  jupiter700: "#015F43",
+  jupiter900: "#00291D"
 };
 
 // src/space.ts
