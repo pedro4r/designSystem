@@ -45,7 +45,8 @@ var colors = {
   jupiter300: "#00B37E",
   jupiter500: "#00875F",
   jupiter700: "#015F43",
-  jupiter900: "#00291D"
+  jupiter900: "#00291D",
+  test: "#FFF"
 };
 var space = {
   1: "0.25rem",
