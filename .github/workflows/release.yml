@@ -24,7 +24,7 @@ jobs:
 
       - run: npm ci
 
-      - name: Publish to NPM
+      - name: Publish to npm
         id: changesets
         uses: changesets/action@v1
         with:
