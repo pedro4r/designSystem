@@ -1,5 +1,11 @@
 # @jupiter-ui/react
 
+## 2.2.0
+
+### Minor Changes
+
+- Adding more components: Tooltip and Toast
+
 ## 2.1.1
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @jupiter-ui/tokens
 
+## 2.3.0
+
+### Minor Changes
+
+- Adding more components: Tooltip and Toast
+
 ## 2.2.0
 
 ### Minor Changes

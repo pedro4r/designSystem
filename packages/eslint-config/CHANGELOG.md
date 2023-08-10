@@ -1,5 +1,11 @@
 # @jupiter-ui/eslint-config
 
+## 3.2.0
+
+### Minor Changes
+
+- Adding more components: Tooltip and Toast
+
 ## 3.1.0
 
 ### Minor Changes
