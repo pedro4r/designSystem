@@ -6,6 +6,8 @@ import * as react_jsx_runtime from 'react/jsx-runtime';
 import * as Avatar$1 from '@radix-ui/react-avatar';
 import * as Checkbox$1 from '@radix-ui/react-checkbox';
 import * as Tooltip$1 from '@radix-ui/react-tooltip';
+import * as RadixToast from '@radix-ui/react-toast';
+import { Provider } from '@radix-ui/react-toast';
 import * as _stitches_react_types_theme from '@stitches/react/types/theme';
 import * as _stitches_react_types_css from '@stitches/react/types/css';
 import * as _stitches_react_types_stitches from '@stitches/react/types/stitches';
@@ -1905,6 +1907,20 @@ declare function TooltipProvider({ children }: {
     children: ReactNode;
 }): react_jsx_runtime.JSX.Element;
 
+interface ToastProviderProps extends ComponentProps<typeof Provider> {
+    children: ReactNode;
+}
+declare function ToastProvider({ children }: ToastProviderProps): react_jsx_runtime.JSX.Element;
+
+interface ToastProps extends ComponentProps<typeof RadixToast.Root> {
+    title: string;
+    content: string;
+}
+declare function Toast({ open, onOpenChange, title, content, ...props }: ToastProps): react_jsx_runtime.JSX.Element;
+declare namespace Toast {
+    var displayName: string;
+}
+
 declare const styled: <Type extends _stitches_react_types_util.Function | keyof JSX.IntrinsicElements | react.ComponentType<any>, Composers extends (string | _stitches_react_types_util.Function | react.ComponentType<any> | {
     [name: string]: unknown;
 })[], CSS = _stitches_react_types_css_util.CSS<{}, {
@@ -3607,4 +3623,4 @@ declare const config: {
     utils: {};
 };
 
-export { Avatar, AvatarProps, Box, BoxProps, Button, ButtonProps, Checkbox, CheckboxProps, Heading, HeadingProps, MultiStep, MultiStepProps, Text, TextArea, TextAreaProps, TextInput, TextInputProps, TextProps, Tooltip, TooltipProps, TooltipProvider, config, createTheme, css, getCssText, globalCss, keyframes, styled, theme };
+export { Avatar, AvatarProps, Box, BoxProps, Button, ButtonProps, Checkbox, CheckboxProps, Heading, HeadingProps, MultiStep, MultiStepProps, Text, TextArea, TextAreaProps, TextInput, TextInputProps, TextProps, Toast, ToastProps, ToastProvider, ToastProviderProps, Tooltip, TooltipProps, TooltipProvider, config, createTheme, css, getCssText, globalCss, keyframes, styled, theme };

@@ -15,11 +15,11 @@ export interface TooltipProps extends ComponentProps<typeof TooltipContent> {
 
 export function Tooltip({ trigger, content, ...props }: TooltipProps) {
     return (
-        <TooltipRoot>
+        <TooltipRoot delayDuration={250}>
             <TooltipTrigger asChild>{trigger}</TooltipTrigger>
             <TooltipPortal>
                 <TooltipContent {...props}>
-                    {content}
+                    <span>{content}</span>
                     <TooltipArrow />
                 </TooltipContent>
             </TooltipPortal>
