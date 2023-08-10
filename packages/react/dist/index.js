@@ -68,6 +68,8 @@ __export(src_exports, {
   Text: () => Text,
   TextArea: () => TextArea,
   TextInput: () => TextInput,
+  Tooltip: () => Tooltip2,
+  TooltipProvider: () => TooltipProvider,
   config: () => config,
   createTheme: () => createTheme,
   css: () => css,
@@ -561,6 +563,72 @@ function MultiStep({ size, currentStep = 1 }) {
   ] });
 }
 MultiStep.displayName = "MultiStep";
+
+// src/components/Tooltip/index.tsx
+var RadixTooltip = __toESM(require("@radix-ui/react-tooltip"));
+
+// src/components/Tooltip/styles.ts
+var Tooltip = __toESM(require("@radix-ui/react-tooltip"));
+var TooltipRoot = styled(Tooltip.Root, {});
+var TooltipTrigger = styled(Tooltip.Trigger, {
+  display: "flex",
+  justifyContent: "center"
+});
+var TooltipPortal = styled(Tooltip.Portal, {});
+var slideUpAndFade = keyframes({
+  "0%": { opacity: 0, transform: "translateY(2px)" },
+  "100%": { opacity: 1, transform: "translateY(0)" }
+});
+var slideRightAndFade = keyframes({
+  "0%": { opacity: 0, transform: "translateX(-2px)" },
+  "100%": { opacity: 1, transform: "translateX(0)" }
+});
+var slideDownAndFade = keyframes({
+  "0%": { opacity: 0, transform: "translateY(-2px)" },
+  "100%": { opacity: 1, transform: "translateY(0)" }
+});
+var slideLeftAndFade = keyframes({
+  "0%": { opacity: 0, transform: "translateX(2px)" },
+  "100%": { opacity: 1, transform: "translateX(0)" }
+});
+var TooltipContent = styled(Tooltip.Content, {
+  backgroundColor: "$black",
+  borderRadius: "$md",
+  padding: "$3 $4",
+  color: "$white",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  fontFamily: "$default",
+  fontSize: "$sm",
+  animationDuration: "400ms",
+  animationTimingFunction: "cubic-bezier(0.16, 1, 0.3, 1)",
+  willChange: "transform, opacity",
+  '&[data-state="delayed-open"]': {
+    '&[data-side="top"]': { animationName: slideDownAndFade },
+    '&[data-side="right"]': { animationName: slideLeftAndFade },
+    '&[data-side="bottom"]': { animationName: slideUpAndFade },
+    '&[data-side="left"]': { animationName: slideRightAndFade }
+  }
+});
+var TooltipArrow = styled(Tooltip.Arrow, {});
+
+// src/components/Tooltip/index.tsx
+var import_jsx_runtime5 = require("react/jsx-runtime");
+function Tooltip2(_a) {
+  var _b = _a, { trigger, content } = _b, props = __objRest(_b, ["trigger", "content"]);
+  return /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)(TooltipRoot, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(TooltipTrigger, { asChild: true, children: trigger }),
+    /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(TooltipPortal, { children: /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)(TooltipContent, __spreadProps(__spreadValues({}, props), { children: [
+      content,
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(TooltipArrow, {})
+    ] })) })
+  ] });
+}
+function TooltipProvider({ children }) {
+  return /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(RadixTooltip.Provider, { children });
+}
+Tooltip2.displayName = "Tooltip";
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   Avatar,
@@ -572,6 +640,8 @@ MultiStep.displayName = "MultiStep";
   Text,
   TextArea,
   TextInput,
+  Tooltip,
+  TooltipProvider,
   config,
   createTheme,
   css,
