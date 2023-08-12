@@ -1,5 +1,11 @@
 # @jupiter-ui/ts-config
 
+## 2.2.1
+
+### Patch Changes
+
+- Adding new component: AlertDialog
+
 ## 2.2.0
 
 ### Minor Changes

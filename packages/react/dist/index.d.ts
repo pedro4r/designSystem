@@ -658,7 +658,8 @@ declare const AvatarImage: _stitches_react_types_styled_component.StyledComponen
         jupiter500: string;
         jupiter700: string;
         jupiter900: string;
-        test1: string;
+        red100: string;
+        red200: string;
     };
     fontSizes: {
         xxs: string;
@@ -1079,7 +1080,8 @@ declare const Input: _stitches_react_types_styled_component.StyledComponent<"inp
         jupiter500: string;
         jupiter700: string;
         jupiter900: string;
-        test1: string;
+        red100: string;
+        red200: string;
     };
     fontSizes: {
         xxs: string;
@@ -1494,7 +1496,8 @@ declare const CheckboxContainer: _stitches_react_types_styled_component.StyledCo
         jupiter500: string;
         jupiter700: string;
         jupiter900: string;
-        test1: string;
+        red100: string;
+        red200: string;
     };
     fontSizes: {
         xxs: string;
@@ -1713,7 +1716,8 @@ declare const TooltipContent: _stitches_react_types_styled_component.StyledCompo
         jupiter500: string;
         jupiter700: string;
         jupiter900: string;
-        test1: string;
+        red100: string;
+        red200: string;
     };
     fontSizes: {
         xxs: string;
@@ -1951,7 +1955,8 @@ declare const styled: <Type extends _stitches_react_types_util.Function | keyof 
         jupiter500: string;
         jupiter700: string;
         jupiter900: string;
-        test1: string;
+        red100: string;
+        red200: string;
     };
     fontSizes: {
         xxs: string;
@@ -2164,7 +2169,8 @@ declare const styled: <Type extends _stitches_react_types_util.Function | keyof 
         jupiter500: string;
         jupiter700: string;
         jupiter900: string;
-        test1: string;
+        red100: string;
+        red200: string;
     };
     fontSizes: {
         xxs: string;
@@ -2369,7 +2375,8 @@ declare const css: <Composers extends (string | _stitches_react_types_util.Funct
         jupiter500: string;
         jupiter700: string;
         jupiter900: string;
-        test1: string;
+        red100: string;
+        red200: string;
     };
     fontSizes: {
         xxs: string;
@@ -2589,7 +2596,8 @@ declare const globalCss: <Styles extends {
             jupiter500: string;
             jupiter700: string;
             jupiter900: string;
-            test1: string;
+            red100: string;
+            red200: string;
         };
         fontSizes: {
             xxs: string;
@@ -2792,7 +2800,8 @@ declare const globalCss: <Styles extends {
         jupiter500: string;
         jupiter700: string;
         jupiter900: string;
-        test1: string;
+        red100: string;
+        red200: string;
     };
     fontSizes: {
         xxs: string;
@@ -2996,7 +3005,8 @@ declare const keyframes: (style: {
             jupiter500: string;
             jupiter700: string;
             jupiter900: string;
-            test1: string;
+            red100: string;
+            red200: string;
         };
         fontSizes: {
             xxs: string;
@@ -3207,7 +3217,8 @@ declare const theme: string & {
         jupiter500: _stitches_react_types_theme.Token<"jupiter500", string, "colors", "">;
         jupiter700: _stitches_react_types_theme.Token<"jupiter700", string, "colors", "">;
         jupiter900: _stitches_react_types_theme.Token<"jupiter900", string, "colors", "">;
-        test1: _stitches_react_types_theme.Token<"test1", string, "colors", "">;
+        red100: _stitches_react_types_theme.Token<"red100", string, "colors", "">;
+        red200: _stitches_react_types_theme.Token<"red200", string, "colors", "">;
     };
     fontSizes: {
         xxs: _stitches_react_types_theme.Token<"xxs", string, "fontSizes", "">;
@@ -3281,7 +3292,8 @@ declare const createTheme: <Argument0 extends string | ({
         jupiter500?: string | number | boolean | undefined;
         jupiter700?: string | number | boolean | undefined;
         jupiter900?: string | number | boolean | undefined;
-        test1?: string | number | boolean | undefined;
+        red100?: string | number | boolean | undefined;
+        red200?: string | number | boolean | undefined;
     } | undefined;
     fontSizes?: {
         xxs?: string | number | boolean | undefined;
@@ -3359,7 +3371,8 @@ declare const createTheme: <Argument0 extends string | ({
         jupiter500?: string | number | boolean | undefined;
         jupiter700?: string | number | boolean | undefined;
         jupiter900?: string | number | boolean | undefined;
-        test1?: string | number | boolean | undefined;
+        red100?: string | number | boolean | undefined;
+        red200?: string | number | boolean | undefined;
     } | undefined;
     fontSizes?: {
         xxs?: string | number | boolean | undefined;
@@ -3444,7 +3457,8 @@ declare const config: {
             jupiter500: string;
             jupiter700: string;
             jupiter900: string;
-            test1: string;
+            red100: string;
+            red200: string;
         };
         fontSizes: {
             xxs: string;

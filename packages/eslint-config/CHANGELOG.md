@@ -1,5 +1,11 @@
 # @jupiter-ui/eslint-config
 
+## 3.2.1
+
+### Patch Changes
+
+- Adding new component: AlertDialog
+
 ## 3.2.0
 
 ### Minor Changes

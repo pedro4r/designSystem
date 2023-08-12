@@ -1,5 +1,11 @@
 # @jupiter-ui/tokens
 
+## 2.4.0
+
+### Minor Changes
+
+- Adding new component: AlertDialog
+
 ## 2.3.0
 
 ### Minor Changes

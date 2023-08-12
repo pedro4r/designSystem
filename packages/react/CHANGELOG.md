@@ -1,5 +1,11 @@
 # @jupiter-ui/react
 
+## 2.3.0
+
+### Minor Changes
+
+- Adding new component: AlertDialog
+
 ## 2.2.0
 
 ### Minor Changes
