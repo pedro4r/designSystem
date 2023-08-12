@@ -45,11 +45,23 @@ export const Button = styled('button', {
                 '&:disabled': {
                     backgroundColor: '$gray200',
                 },
+
+                '&:focus': {
+                    border: 'none',
+                    outline: 'none',
+                    boxShadow: 'none',
+                },
             },
 
             secondary: {
                 color: '$jupiter300',
                 border: '2px solid $jupiter500',
+
+                '&:focus': {
+                    border: '2px solid $jupiter300',
+                    outline: 'none',
+                    boxShadow: 'none',
+                },
 
                 '&:not(disabled):hover': {
                     background: '$jupiter500',
@@ -71,6 +83,25 @@ export const Button = styled('button', {
 
                 '&:disabled': {
                     color: '$gray600',
+                },
+            },
+
+            danger: {
+                color: '$white',
+                background: '$red200',
+
+                '&:not(:disabled):hover': {
+                    background: '$red100',
+                },
+
+                '&:disabled': {
+                    backgroundColor: '$gray200',
+                },
+
+                '&:focus': {
+                    border: 'none',
+                    outline: 'none',
+                    boxShadow: 'none',
                 },
             },
         },

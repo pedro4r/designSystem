@@ -3,7 +3,7 @@ import { ComponentProps } from 'react'
 import { X } from 'phosphor-react'
 import { ToastContainer, ToastViewPort } from './styles'
 
-export * from './ToastProvider'
+export * from '../Providers/Toast'
 
 export interface ToastProps extends ComponentProps<typeof RadixToast.Root> {
     title: string

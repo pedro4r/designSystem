@@ -2,9 +2,9 @@ import type { StoryObj, Meta } from '@storybook/react'
 import { space } from '@jupiter-ui/tokens'
 import {
   Tooltip,
-  TooltipProvider,
   TooltipProps,
   Button,
+  MyTooltipProvider,
 } from '@jupiter-ui/react'
 
 // Funcina como global para todas as variantes
@@ -25,9 +25,9 @@ export default {
   decorators: [
     (Story) => {
       return (
-        <TooltipProvider>
+        <MyTooltipProvider>
           <div style={{ padding: space[10] }}>{Story()}</div>
-        </TooltipProvider>
+        </MyTooltipProvider>
       )
     },
   ],

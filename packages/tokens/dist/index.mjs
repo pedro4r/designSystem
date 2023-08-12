@@ -14,7 +14,8 @@ var colors = {
   jupiter500: "#00875F",
   jupiter700: "#015F43",
   jupiter900: "#00291D",
-  test1: "#333"
+  red100: "#E0525D",
+  red200: "#e63946"
 };
 
 // src/space.ts

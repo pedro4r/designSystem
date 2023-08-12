@@ -46,7 +46,8 @@ var colors = {
   jupiter500: "#00875F",
   jupiter700: "#015F43",
   jupiter900: "#00291D",
-  test1: "#333"
+  red100: "#E0525D",
+  red200: "#e63946"
 };
 var space = {
   1: "0.25rem",
@@ -136,7 +137,7 @@ var Box = styled("div", {
   padding: "$6",
   borderRadius: "$md",
   backgroundColor: "$gray800",
-  border: "1px solid $grau600"
+  border: "1px solid $gray600"
 });
 Box.displayName = "Box";
 
@@ -271,11 +272,21 @@ var Button = styled("button", {
         },
         "&:disabled": {
           backgroundColor: "$gray200"
+        },
+        "&:focus": {
+          border: "none",
+          outline: "none",
+          boxShadow: "none"
         }
       },
       secondary: {
         color: "$jupiter300",
         border: "2px solid $jupiter500",
+        "&:focus": {
+          border: "2px solid $jupiter300",
+          outline: "none",
+          boxShadow: "none"
+        },
         "&:not(disabled):hover": {
           background: "$jupiter500",
           color: "$white"
@@ -292,6 +303,21 @@ var Button = styled("button", {
         },
         "&:disabled": {
           color: "$gray600"
+        }
+      },
+      danger: {
+        color: "$white",
+        background: "$red200",
+        "&:not(:disabled):hover": {
+          background: "$red100"
+        },
+        "&:disabled": {
+          backgroundColor: "$gray200"
+        },
+        "&:focus": {
+          border: "none",
+          outline: "none",
+          boxShadow: "none"
         }
       }
     },
@@ -513,9 +539,6 @@ function MultiStep({ size, currentStep = 1 }) {
 }
 MultiStep.displayName = "MultiStep";
 
-// src/components/Tooltip/index.tsx
-import * as RadixTooltip from "@radix-ui/react-tooltip";
-
 // src/components/Tooltip/styles.ts
 import * as Tooltip from "@radix-ui/react-tooltip";
 var TooltipRoot = styled(Tooltip.Root, {});
@@ -573,9 +596,6 @@ function Tooltip2(_a) {
       /* @__PURE__ */ jsx5(TooltipArrow, {})
     ] })) })
   ] });
-}
-function TooltipProvider({ children }) {
-  return /* @__PURE__ */ jsx5(RadixTooltip.Provider, { children });
 }
 Tooltip2.displayName = "Tooltip";
 
@@ -654,11 +674,11 @@ var ToastViewPort = styled(Toast.Viewport, {
   zIndex: 999999999
 });
 
-// src/components/Toast/ToastProvider.tsx
-import { Provider as Provider2 } from "@radix-ui/react-toast";
+// src/components/Providers/Toast.tsx
+import { Provider } from "@radix-ui/react-toast";
 import { jsx as jsx6 } from "react/jsx-runtime";
 function ToastProvider({ children }) {
-  return /* @__PURE__ */ jsx6(Provider2, { children });
+  return /* @__PURE__ */ jsx6(Provider, { children });
 }
 
 // src/components/Toast/index.tsx
@@ -697,7 +717,117 @@ function Toast2(_a) {
   ] });
 }
 Toast2.displayName = "Toast";
+
+// src/components/AlertDialog/styles.ts
+import * as RadixAlertDialog from "@radix-ui/react-alert-dialog";
+var overlayShow = keyframes({
+  "0%": { opacity: 0 },
+  "100%": { opacity: 1 }
+});
+var contentShow = keyframes({
+  "0%": { opacity: 0, transform: "translate(-50%, -48%) scale(.96)" },
+  "100%": { opacity: 1, transform: "translate(-50%, -50%) scale(1)" }
+});
+var AlertDialogRoot = styled(RadixAlertDialog.Root, {});
+var AlertDialogTrigger = styled(RadixAlertDialog.Trigger, {
+  all: "unset"
+});
+var AlertDialogPortal = styled(RadixAlertDialog.Portal, {});
+var AlertDialogOverlay = styled(RadixAlertDialog.Overlay, {
+  backgroundColor: "$gray600",
+  position: "fixed",
+  inset: 0,
+  animation: `${overlayShow} 150ms cubic-bezier(0.16, 1, 0.3, 1)`
+});
+var AlertDialogContent = styled(RadixAlertDialog.Content, {});
+var AlertBox = styled(Box, {
+  boxShadow: "hsl(206 22% 7% / 35%) 0px 10px 38px -10px, hsl(206 22% 7% / 20%) 0px 10px 20px -15px",
+  position: "fixed",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: "90vw",
+  maxWidth: "500px",
+  maxHeight: "85vh",
+  animation: `${contentShow} 150ms cubic-bezier(0.16, 1, 0.3, 1)`,
+  "&:focus": { outline: "none" }
+});
+var AlertDialogTitle = styled(RadixAlertDialog.Title, {
+  marginBottom: "$2",
+  color: "$white"
+});
+var AlertDialogDescription = styled(RadixAlertDialog.Description, {
+  marginBottom: "$6",
+  color: "$gray400",
+  fontSize: 15,
+  lineHeight: 1.5
+});
+var Flex = styled("div", {
+  display: "flex",
+  justifyContent: "flex-end",
+  gap: "$2"
+});
+var AlertDialogCancel = styled(RadixAlertDialog.Cancel, {});
+var AlertDialogAction = styled(RadixAlertDialog.Action, {});
+
+// src/components/AlertDialog/index.tsx
+import { useState } from "react";
+import { jsx as jsx8, jsxs as jsxs6 } from "react/jsx-runtime";
+function AlertDialog(_a) {
+  var _b = _a, {
+    trigger,
+    title,
+    description,
+    cancelButton,
+    confirmButton
+  } = _b, props = __objRest(_b, [
+    "trigger",
+    "title",
+    "description",
+    "cancelButton",
+    "confirmButton"
+  ]);
+  const [cancelFocus, setCancelFocus] = useState(true);
+  const cancelOnFocus = () => {
+    setCancelFocus(true);
+    setConfirmFocus(false);
+  };
+  const [confirmFocus, setConfirmFocus] = useState(true);
+  const confirmlOnFocus = () => {
+    setConfirmFocus(true);
+    setCancelFocus(false);
+  };
+  return /* @__PURE__ */ jsxs6(AlertDialogRoot, { children: [
+    /* @__PURE__ */ jsx8(AlertDialogTrigger, { children: trigger }),
+    /* @__PURE__ */ jsxs6(AlertDialogPortal, { children: [
+      /* @__PURE__ */ jsx8(AlertDialogOverlay, {}),
+      /* @__PURE__ */ jsx8(AlertDialogContent, { asChild: true, children: /* @__PURE__ */ jsxs6(AlertBox, { children: [
+        /* @__PURE__ */ jsx8(AlertDialogTitle, { asChild: true, children: /* @__PURE__ */ jsx8(Heading, { size: "sm", children: title }) }),
+        /* @__PURE__ */ jsx8(AlertDialogDescription, { asChild: true, children: /* @__PURE__ */ jsx8(Text, { size: "md", children: description }) }),
+        /* @__PURE__ */ jsxs6(Flex, { children: [
+          /* @__PURE__ */ jsx8(AlertDialogCancel, { asChild: true, children: /* @__PURE__ */ jsx8(
+            Button,
+            {
+              onFocus: cancelOnFocus,
+              variant: cancelFocus ? "danger" : "tertiary",
+              children: cancelButton
+            }
+          ) }),
+          /* @__PURE__ */ jsx8(AlertDialogAction, { asChild: true, children: /* @__PURE__ */ jsx8(
+            Button,
+            {
+              onFocus: confirmlOnFocus,
+              variant: confirmFocus ? "primary" : "tertiary",
+              children: confirmButton
+            }
+          ) })
+        ] })
+      ] }) })
+    ] })
+  ] });
+}
 export {
+  AlertDialog,
   Avatar2 as Avatar,
   Box,
   Button,
@@ -710,7 +840,6 @@ export {
   Toast2 as Toast,
   ToastProvider,
   Tooltip2 as Tooltip,
-  TooltipProvider,
   config,
   createTheme,
   css,

@@ -13,7 +13,8 @@ declare const colors: {
     jupiter500: string;
     jupiter700: string;
     jupiter900: string;
-    test1: string;
+    red100: string;
+    red200: string;
 };
 
 declare const space: {

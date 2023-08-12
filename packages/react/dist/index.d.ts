@@ -8,6 +8,7 @@ import * as Checkbox$1 from '@radix-ui/react-checkbox';
 import * as Tooltip$1 from '@radix-ui/react-tooltip';
 import * as RadixToast from '@radix-ui/react-toast';
 import { Provider } from '@radix-ui/react-toast';
+import * as RadixAlertDialog from '@radix-ui/react-alert-dialog';
 import * as _stitches_react_types_theme from '@stitches/react/types/theme';
 import * as _stitches_react_types_css from '@stitches/react/types/css';
 import * as _stitches_react_types_stitches from '@stitches/react/types/stitches';
@@ -29,7 +30,8 @@ declare const Box: _stitches_react_types_styled_component.StyledComponent<"div",
         jupiter500: string;
         jupiter700: string;
         jupiter900: string;
-        test1: string;
+        red100: string;
+        red200: string;
     };
     fontSizes: {
         xxs: string;
@@ -238,7 +240,8 @@ declare const Text: _stitches_react_types_styled_component.StyledComponent<"p", 
         jupiter500: string;
         jupiter700: string;
         jupiter900: string;
-        test1: string;
+        red100: string;
+        red200: string;
     };
     fontSizes: {
         xxs: string;
@@ -447,7 +450,8 @@ declare const Heading: _stitches_react_types_styled_component.StyledComponent<"h
         jupiter500: string;
         jupiter700: string;
         jupiter900: string;
-        test1: string;
+        red100: string;
+        red200: string;
     };
     fontSizes: {
         xxs: string;
@@ -849,7 +853,7 @@ declare namespace Avatar {
 }
 
 declare const Button: _stitches_react_types_styled_component.StyledComponent<"button", {
-    variant?: "primary" | "secondary" | "tertiary" | undefined;
+    variant?: "primary" | "secondary" | "tertiary" | "danger" | undefined;
     size?: "sm" | "md" | undefined;
 }, {}, _stitches_react_types_css_util.CSS<{}, {
     colors: {
@@ -867,7 +871,8 @@ declare const Button: _stitches_react_types_styled_component.StyledComponent<"bu
         jupiter500: string;
         jupiter700: string;
         jupiter900: string;
-        test1: string;
+        red100: string;
+        red200: string;
     };
     fontSizes: {
         xxs: string;
@@ -1283,7 +1288,8 @@ declare const TextArea: _stitches_react_types_styled_component.StyledComponent<"
         jupiter500: string;
         jupiter700: string;
         jupiter900: string;
-        test1: string;
+        red100: string;
+        red200: string;
     };
     fontSizes: {
         xxs: string;
@@ -1903,9 +1909,6 @@ declare function Tooltip({ trigger, content, ...props }: TooltipProps): react_js
 declare namespace Tooltip {
     var displayName: string;
 }
-declare function TooltipProvider({ children }: {
-    children: ReactNode;
-}): react_jsx_runtime.JSX.Element;
 
 interface ToastProviderProps extends ComponentProps<typeof Provider> {
     children: ReactNode;
@@ -1920,6 +1923,15 @@ declare function Toast({ open, onOpenChange, title, content, ...props }: ToastPr
 declare namespace Toast {
     var displayName: string;
 }
+
+interface AlertDialogProps extends ComponentProps<typeof RadixAlertDialog.Root> {
+    trigger: ReactNode;
+    title: string;
+    description: string;
+    cancelButton: string;
+    confirmButton: string;
+}
+declare function AlertDialog({ trigger, title, description, cancelButton, confirmButton, ...props }: AlertDialogProps): react_jsx_runtime.JSX.Element;
 
 declare const styled: <Type extends _stitches_react_types_util.Function | keyof JSX.IntrinsicElements | react.ComponentType<any>, Composers extends (string | _stitches_react_types_util.Function | react.ComponentType<any> | {
     [name: string]: unknown;
@@ -3623,4 +3635,4 @@ declare const config: {
     utils: {};
 };
 
-export { Avatar, AvatarProps, Box, BoxProps, Button, ButtonProps, Checkbox, CheckboxProps, Heading, HeadingProps, MultiStep, MultiStepProps, Text, TextArea, TextAreaProps, TextInput, TextInputProps, TextProps, Toast, ToastProps, ToastProvider, ToastProviderProps, Tooltip, TooltipProps, TooltipProvider, config, createTheme, css, getCssText, globalCss, keyframes, styled, theme };
+export { AlertDialog, AlertDialogProps, Avatar, AvatarProps, Box, BoxProps, Button, ButtonProps, Checkbox, CheckboxProps, Heading, HeadingProps, MultiStep, MultiStepProps, Text, TextArea, TextAreaProps, TextInput, TextInputProps, TextProps, Toast, ToastProps, ToastProvider, ToastProviderProps, Tooltip, TooltipProps, config, createTheme, css, getCssText, globalCss, keyframes, styled, theme };

@@ -1,5 +1,4 @@
 import { ComponentProps, ReactNode } from 'react'
-import * as RadixTooltip from '@radix-ui/react-tooltip'
 import {
     TooltipArrow,
     TooltipContent,
@@ -25,10 +24,6 @@ export function Tooltip({ trigger, content, ...props }: TooltipProps) {
             </TooltipPortal>
         </TooltipRoot>
     )
-}
-
-export function TooltipProvider({ children }: { children: ReactNode }) {
-    return <RadixTooltip.Provider>{children}</RadixTooltip.Provider>
 }
 
 Tooltip.displayName = 'Tooltip'
