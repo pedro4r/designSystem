@@ -4,7 +4,7 @@ import {
   Tooltip,
   TooltipProps,
   Button,
-  MyTooltipProvider,
+  TooltipProvider,
 } from '@jupiter-ui/react'
 
 // Funcina como global para todas as variantes
@@ -25,9 +25,9 @@ export default {
   decorators: [
     (Story) => {
       return (
-        <MyTooltipProvider>
+        <TooltipProvider>
           <div style={{ padding: space[10] }}>{Story()}</div>
-        </MyTooltipProvider>
+        </TooltipProvider>
       )
     },
   ],

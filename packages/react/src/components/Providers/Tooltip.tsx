@@ -6,6 +6,6 @@ export interface TooltipProviderProps extends ComponentProps<typeof Provider> {
     children: ReactNode
 }
 
-export function MyTooltipProvider({ children }: TooltipProviderProps) {
+export function TooltipProvider({ children }: TooltipProviderProps) {
     return <RadixTooltip.Provider>{children} </RadixTooltip.Provider>
 }

@@ -495,6 +495,67 @@ function Checkbox2(props) {
 }
 Checkbox2.displayName = "Checkbox";
 
+// src/components/Providers/index.tsx
+import { Check as Check2 } from "phosphor-react";
+
+// src/components/Providers/styles.ts
+import * as Checkbox3 from "@radix-ui/react-checkbox";
+var CheckboxContainer2 = styled(Checkbox3.Root, {
+  all: "unset",
+  width: "$6",
+  height: "$6",
+  backgroundColor: "$gray900",
+  borderRadius: "$xs",
+  lineHeight: 0,
+  cursor: "pointer",
+  overflow: "hidden",
+  boxSizing: "border-box",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  border: "2px solid $gray900",
+  '&[data-state="checked"]': {
+    backgroundColor: "$jupiter300"
+  },
+  '&:focus, &[data-state="checked"]': {
+    border: "2px solid $jupiter300"
+  }
+});
+var slideIn2 = keyframes({
+  from: {
+    transform: "translateY(-100%)"
+  },
+  to: {
+    transform: "translateY(0)"
+  }
+});
+var slideOut2 = keyframes({
+  from: {
+    transform: "translateY(0)"
+  },
+  to: {
+    transform: "translateY(-100%)"
+  }
+});
+var CheckboxIndicator2 = styled(Checkbox3.Indicator, {
+  color: "$white",
+  width: "$4",
+  height: "$4",
+  '&[data-state="checked"]': {
+    animation: `${slideIn2} 200ms ease-out`
+  },
+  '&[data-state="unchecked"]': {
+    animation: `${slideOut2} 200ms ease-out`
+  }
+});
+
+// src/components/Providers/index.tsx
+import { jsx as jsx4 } from "react/jsx-runtime";
+function Checkbox22(props) {
+  return /* @__PURE__ */ jsx4(CheckboxContainer2, __spreadProps(__spreadValues({}, props), { children: /* @__PURE__ */ jsx4(CheckboxIndicator2, { asChild: true, children: /* @__PURE__ */ jsx4(Check2, { weight: "bold" }) }) }));
+}
+Checkbox22.displayName = "Checkbox";
+
 // src/components/MultiStep/styles.ts
 var MultiStepContainer = styled("div", {});
 var Label = styled(Text, {
@@ -523,7 +584,7 @@ var Step = styled("div", {
 });
 
 // src/components/MultiStep/index.tsx
-import { jsx as jsx4, jsxs as jsxs3 } from "react/jsx-runtime";
+import { jsx as jsx5, jsxs as jsxs3 } from "react/jsx-runtime";
 function MultiStep({ size, currentStep = 1 }) {
   return /* @__PURE__ */ jsxs3(MultiStepContainer, { children: [
     /* @__PURE__ */ jsxs3(Label, { children: [
@@ -532,8 +593,8 @@ function MultiStep({ size, currentStep = 1 }) {
       " of ",
       size
     ] }),
-    /* @__PURE__ */ jsx4(Steps, { css: { "--steps-size": size }, children: Array.from({ length: size }, (_, i) => i + 1).map((step) => {
-      return /* @__PURE__ */ jsx4(Step, { active: currentStep >= step }, step);
+    /* @__PURE__ */ jsx5(Steps, { css: { "--steps-size": size }, children: Array.from({ length: size }, (_, i) => i + 1).map((step) => {
+      return /* @__PURE__ */ jsx5(Step, { active: currentStep >= step }, step);
     }) })
   ] });
 }
@@ -586,14 +647,14 @@ var TooltipContent = styled(Tooltip.Content, {
 var TooltipArrow = styled(Tooltip.Arrow, {});
 
 // src/components/Tooltip/index.tsx
-import { jsx as jsx5, jsxs as jsxs4 } from "react/jsx-runtime";
+import { jsx as jsx6, jsxs as jsxs4 } from "react/jsx-runtime";
 function Tooltip2(_a) {
   var _b = _a, { trigger, content } = _b, props = __objRest(_b, ["trigger", "content"]);
   return /* @__PURE__ */ jsxs4(TooltipRoot, { delayDuration: 250, children: [
-    /* @__PURE__ */ jsx5(TooltipTrigger, { asChild: true, children: trigger }),
-    /* @__PURE__ */ jsx5(TooltipPortal, { children: /* @__PURE__ */ jsxs4(TooltipContent, __spreadProps(__spreadValues({}, props), { children: [
-      /* @__PURE__ */ jsx5("span", { children: content }),
-      /* @__PURE__ */ jsx5(TooltipArrow, {})
+    /* @__PURE__ */ jsx6(TooltipTrigger, { asChild: true, children: trigger }),
+    /* @__PURE__ */ jsx6(TooltipPortal, { children: /* @__PURE__ */ jsxs4(TooltipContent, __spreadProps(__spreadValues({}, props), { children: [
+      /* @__PURE__ */ jsx6("span", { children: content }),
+      /* @__PURE__ */ jsx6(TooltipArrow, {})
     ] })) })
   ] });
 }
@@ -605,7 +666,7 @@ import { X } from "phosphor-react";
 
 // src/components/Toast/styles.ts
 import * as Toast from "@radix-ui/react-toast";
-var slideIn2 = keyframes({
+var slideIn3 = keyframes({
   from: {
     transform: "translateX(calc(100% + 24px))"
   },
@@ -613,7 +674,7 @@ var slideIn2 = keyframes({
     transform: "translateX(0)"
   }
 });
-var slideOut2 = keyframes({
+var slideOut3 = keyframes({
   from: {
     transform: "translateX(0)"
   },
@@ -658,10 +719,10 @@ var ToastContainer = styled(Toast.Root, {
     lineHeight: "$base"
   },
   '&[data-state="open"]': {
-    animation: `${slideIn2} 300ms ease`
+    animation: `${slideIn3} 300ms ease`
   },
   '&[data-state="closed"]': {
-    animation: `${slideOut2} 300ms ease`
+    animation: `${slideOut3} 300ms ease`
   }
 });
 var ToastViewPort = styled(Toast.Viewport, {
@@ -673,13 +734,6 @@ var ToastViewPort = styled(Toast.Viewport, {
   listStyle: "none",
   zIndex: 999999999
 });
-
-// src/components/Providers/Toast.tsx
-import { Provider } from "@radix-ui/react-toast";
-import { jsx as jsx6 } from "react/jsx-runtime";
-function ToastProvider({ children }) {
-  return /* @__PURE__ */ jsx6(Provider, { children });
-}
 
 // src/components/Toast/index.tsx
 import { Fragment, jsx as jsx7, jsxs as jsxs5 } from "react/jsx-runtime";
@@ -832,13 +886,13 @@ export {
   Box,
   Button,
   Checkbox2 as Checkbox,
+  Checkbox22 as Checkbox2,
   Heading,
   MultiStep,
   Text,
   TextArea,
   TextInput,
   Toast2 as Toast,
-  ToastProvider,
   Tooltip2 as Tooltip,
   config,
   createTheme,
