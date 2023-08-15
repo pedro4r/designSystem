@@ -19,7 +19,7 @@ const config = {
   },
   viteFinal: (config, {configType}) => {
     if(configType === 'PRODUCTION') {
-      config.base = '/designsystem/'
+      config.base = '/jupiter-ui/'
     }
     return config
   }
