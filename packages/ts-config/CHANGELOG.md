@@ -1,5 +1,11 @@
 # @jupiter-ui/ts-config
 
+## 2.2.2
+
+### Patch Changes
+
+- Change repo name and pathways
+
 ## 2.2.1
 
 ### Patch Changes

@@ -7,7 +7,7 @@ export default {
   tags: ['autodocs'],
   args: {
     src: 'https://github.com/pedro4r.png',
-    alt: 'Diego Fernandes',
+    alt: 'Pedro Requiao',
   },
   argTypes: {
     src: {

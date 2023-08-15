@@ -1,5 +1,11 @@
 # @jupiter-ui/tokens
 
+## 2.4.2
+
+### Patch Changes
+
+- Change repo name and pathways
+
 ## 2.4.1
 
 ### Patch Changes
