@@ -64,14 +64,15 @@ __export(src_exports, {
   Box: () => Box,
   Button: () => Button,
   Checkbox: () => Checkbox2,
-  Checkbox2: () => Checkbox22,
   Heading: () => Heading,
   MultiStep: () => MultiStep,
   Text: () => Text,
   TextArea: () => TextArea,
   TextInput: () => TextInput,
   Toast: () => Toast2,
+  ToastProvider: () => ToastProvider,
   Tooltip: () => Tooltip2,
+  TooltipProvider: () => TooltipProvider,
   config: () => config,
   createTheme: () => createTheme,
   css: () => css,
@@ -549,65 +550,18 @@ function Checkbox2(props) {
 Checkbox2.displayName = "Checkbox";
 
 // src/components/Providers/index.tsx
-var import_phosphor_react3 = require("phosphor-react");
-
-// src/components/Providers/styles.ts
-var Checkbox3 = __toESM(require("@radix-ui/react-checkbox"));
-var CheckboxContainer2 = styled(Checkbox3.Root, {
-  all: "unset",
-  width: "$6",
-  height: "$6",
-  backgroundColor: "$gray900",
-  borderRadius: "$xs",
-  lineHeight: 0,
-  cursor: "pointer",
-  overflow: "hidden",
-  boxSizing: "border-box",
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  border: "2px solid $gray900",
-  '&[data-state="checked"]': {
-    backgroundColor: "$jupiter300"
-  },
-  '&:focus, &[data-state="checked"]': {
-    border: "2px solid $jupiter300"
-  }
-});
-var slideIn2 = keyframes({
-  from: {
-    transform: "translateY(-100%)"
-  },
-  to: {
-    transform: "translateY(0)"
-  }
-});
-var slideOut2 = keyframes({
-  from: {
-    transform: "translateY(0)"
-  },
-  to: {
-    transform: "translateY(-100%)"
-  }
-});
-var CheckboxIndicator2 = styled(Checkbox3.Indicator, {
-  color: "$white",
-  width: "$4",
-  height: "$4",
-  '&[data-state="checked"]': {
-    animation: `${slideIn2} 200ms ease-out`
-  },
-  '&[data-state="unchecked"]': {
-    animation: `${slideOut2} 200ms ease-out`
-  }
-});
-
-// src/components/Providers/index.tsx
+var RadixToast = __toESM(require("@radix-ui/react-toast"));
+var RadixTooltip = __toESM(require("@radix-ui/react-tooltip"));
 var import_jsx_runtime4 = require("react/jsx-runtime");
-function Checkbox22(props) {
-  return /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(CheckboxContainer2, __spreadProps(__spreadValues({}, props), { children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(CheckboxIndicator2, { asChild: true, children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(import_phosphor_react3.Check, { weight: "bold" }) }) }));
+function ToastProvider({ children }) {
+  return /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(RadixToast.Provider, { children });
 }
-Checkbox22.displayName = "Checkbox";
+function TooltipProvider({ children }) {
+  return /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(RadixTooltip.Provider, { children: [
+    children,
+    " "
+  ] });
+}
 
 // src/components/MultiStep/styles.ts
 var MultiStepContainer = styled("div", {});
@@ -714,12 +668,12 @@ function Tooltip2(_a) {
 Tooltip2.displayName = "Tooltip";
 
 // src/components/Toast/index.tsx
-var RadixToast = __toESM(require("@radix-ui/react-toast"));
-var import_phosphor_react4 = require("phosphor-react");
+var RadixToast2 = __toESM(require("@radix-ui/react-toast"));
+var import_phosphor_react3 = require("phosphor-react");
 
 // src/components/Toast/styles.ts
 var Toast = __toESM(require("@radix-ui/react-toast"));
-var slideIn3 = keyframes({
+var slideIn2 = keyframes({
   from: {
     transform: "translateX(calc(100% + 24px))"
   },
@@ -727,7 +681,7 @@ var slideIn3 = keyframes({
     transform: "translateX(0)"
   }
 });
-var slideOut3 = keyframes({
+var slideOut2 = keyframes({
   from: {
     transform: "translateX(0)"
   },
@@ -772,10 +726,10 @@ var ToastContainer = styled(Toast.Root, {
     lineHeight: "$base"
   },
   '&[data-state="open"]': {
-    animation: `${slideIn3} 300ms ease`
+    animation: `${slideIn2} 300ms ease`
   },
   '&[data-state="closed"]': {
-    animation: `${slideOut3} 300ms ease`
+    animation: `${slideOut2} 300ms ease`
   }
 });
 var ToastViewPort = styled(Toast.Viewport, {
@@ -813,10 +767,10 @@ function Toast2(_a) {
         duration: 3e3,
         children: [
           /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("div", { children: [
-            /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(RadixToast.Title, { asChild: true, children: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("h2", { children: title }) }),
-            /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(RadixToast.Close, { asChild: true, children: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(import_phosphor_react4.X, { weight: "bold", size: 20 }) })
+            /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(RadixToast2.Title, { asChild: true, children: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("h2", { children: title }) }),
+            /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(RadixToast2.Close, { asChild: true, children: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(import_phosphor_react3.X, { weight: "bold", size: 20 }) })
           ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(RadixToast.Description, { asChild: true, children: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("span", { children: content }) })
+          /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(RadixToast2.Description, { asChild: true, children: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("span", { children: content }) })
         ]
       })
     ),
@@ -940,14 +894,15 @@ function AlertDialog(_a) {
   Box,
   Button,
   Checkbox,
-  Checkbox2,
   Heading,
   MultiStep,
   Text,
   TextArea,
   TextInput,
   Toast,
+  ToastProvider,
   Tooltip,
+  TooltipProvider,
   config,
   createTheme,
   css,
