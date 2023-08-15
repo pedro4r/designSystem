@@ -1,5 +1,11 @@
 # @jupiter-ui/react
 
+## 2.3.1
+
+### Patch Changes
+
+- fixing error at tooltip and toast components providers
+
 ## 2.3.0
 
 ### Minor Changes

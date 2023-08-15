@@ -1,5 +1,11 @@
 # @jupiter-ui/tokens
 
+## 2.4.1
+
+### Patch Changes
+
+- fixing error at tooltip and toast components providers
+
 ## 2.4.0
 
 ### Minor Changes
