@@ -1,11 +1,16 @@
-# Components
+# Jupiter UI is a Design System library for React ⚛️
 
-- [ ] Text Editor
-- [ ] Heading
-- [ ] Box
-- [ ] Button
-- [ ] TextInput
-- [ ] TextArea
-- [ ] Checkbox
-- [ ] Avatar
-- [ ] MultiStep
+## Components 📌 
+
+- [x] Text Editor
+- [x] Heading
+- [x] Box
+- [x] Button
+- [x] TextInput
+- [x] TextArea
+- [x] Checkbox
+- [x] Avatar
+- [x] MultiStep
+- [x] Alter Dialog
+- [x] Tooltip
+- [x] Toast
