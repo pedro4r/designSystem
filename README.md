@@ -1,6 +1,8 @@
-# Jupiter UI is a Design System library for React ⚛️
+<div align="center">
+  <h1 align="center">Jupiter UI is a Design System library for React ⚛️</h3>
+</div>
 
-## Components 📌 
+# Components 📌 
 
 - [x] Text Editor
 - [x] Heading
