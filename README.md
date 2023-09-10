@@ -2,6 +2,8 @@
   <h1 align="center">Jupiter UI is a Design System library for React ⚛️</h3>
 </div>
 
+![Demo Animation](https://raw.githubusercontent.com/pedro4r/jupiter-ui/assets/images/01.png)
+
 # Components 📌 
 
 - [x] Text Editor
